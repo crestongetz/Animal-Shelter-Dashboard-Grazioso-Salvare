@@ -6,6 +6,9 @@
 ## Usage and Functionality
 
 ## Tools Used
+### MongoDB
+### Dash
+### Pymongo
 
 ## Challenges
 
