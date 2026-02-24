@@ -48,6 +48,8 @@ Pandas is a very powerful data analysis library with the use of data frames. The
 * When creating the pie chart, we had to review the pyplot documentation as the plain pie chart was showing data in the entire data set and un-readable. After creating some subsets in pandas and filtering just the top 10 dog breeds, the chart is significantly more readable. 
 
 ## Future Improvements
+1. Removed Hard Coded Login
+2. Improve Style of page
 
 ## Reflection
 
