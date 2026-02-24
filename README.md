@@ -5,7 +5,7 @@ This is a `full-stack web application` dashboard created for Grazioso Salvare, a
 ## Getting Started
 You will need the following software or libraries:  
 1. [Python ](https://www.python.org/downloads/)
-2. Python CRUD module(add link to readME) 
+2. [Python CRUD module](CRUD_Python_Module.py)
 3. [PyMongo](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/get-started/)  
 4. [MongoDB](https://www.mongodb.com/docs/get-started/?language=nodejs)
 5. [Dash](https://dash.plotly.com/installation) 
