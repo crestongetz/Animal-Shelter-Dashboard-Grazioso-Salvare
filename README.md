@@ -13,7 +13,7 @@ You will need the following software or libraries:
 7. [Pandas](https://pandas.pydata.org/)
 
 ## Usage and Functionality
-See [readME PDF](Grazioso-Salvare_README_PDF.pdf)
+See [README PDF](Grazioso-Salvare_README_PDF.pdf)
 
 ## Methodology of Tools Used
 ### Python
