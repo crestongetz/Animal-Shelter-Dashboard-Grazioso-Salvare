@@ -16,9 +16,21 @@ You will need the following software or libraries:
 TODO
 
 ## Tools Used
+### Python
+Various python libraries such as pymongo, dash, pandas and dash leaflet were used in this application due to their flexibility and ease of connecting to MongoDB. In our Python CRUD module, we used pymongo and pandas to connect to Mongo.
+
 ### MongoDB
+MongoDB was used for this project to implement the model in the MVC architecture. It accommodates the data needed for the animal shelter, including varied data and location data. By using MongoDB the application will be very easy to use with other datasets due to the flexibility of the document style. MongoDB also offers a lot of support for python, which makes working with the other tools used easier.
+
 ### Dash
+Another powerful python library that acts as the view and controller part of the MVC design. It abstracts most of the front-end work of development allowing us to use built in features to display data such as the data table above.
+Dash Leaflet – An extension library for dash that lets us implement the geolocation map using the GPS coordinates in the data. This makes the dashboard more interesting and interactive. 
+
 ### Pymongo
+Used for its ease of use with MongoDB. It offers full support for MongoDB querying. And it is a very scalable library that lets Python dicts be mapped to Mongo’s BSON format.
+
+### Pandas
+Pandas is a very powerful data analysis library with the use of data frames. The library helps us connect the data we import from pymongo and display it on dash acting as the controller of the application.
 
 ## Challenges
 
