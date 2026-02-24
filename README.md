@@ -32,6 +32,14 @@ Used for its ease of use with MongoDB. It offers full support for MongoDB queryi
 ### Pandas
 Pandas is a very powerful data analysis library with the use of data frames. The library helps us connect the data we import from pymongo and display it on dash acting as the controller of the application.
 
+## Steps to Complete Project
+1. Before any work was done on the dashboard, the specs and requirements were heavily reviewed. From the specs and requirements, we created a plan to create the dashboard. 
+2. The first step of the plan was to use the Python CRUD module to connect with MongoDB and display an unfiltered view of the data. From there, we can add more complex logic. 
+3. After we added the unfiltered view of the MongoDB data using a dash data table, pymongo, and our CRUD module, we worked on the formatting and styling of the table. We added the ability to perform basic filtering, limited the number of rows, enabled pagination, formatted the headers, added the logo, and so on. 
+4. Once the data table was displayed neatly and correctly, we created the queries to filter specific types of training dogs. The queries where created from the spec sheet given to us by Grazioso Salvare. Such as water rescue or mountain and wilderness tracking. With these queries, we implemented a dropdown menu so users can easily select what filter they want to use. With the dropdown and our queries, we can use a dash call back to change the data shown on the data table. 
+5. Next, we implemented the dash leaflet geolocation chart. Again, using a callback and the GPS coordinates in the data, we can display the location of the animal as well as various info about it using a popup. 
+6. Lastly, we created a pie chart that will show the top 10 dog breeds in the data table. It will change based on the filter used. If a filter is used that removes the dog breeds or animal type from the data table, then no chart will be shown. 
+
 ## Challenges
 * Throughout this project, we encountered many challenges and obstacles. 
 * The formatting of the header and logo proved to be difficult. We used flexbox in CSS to neatly display the two next to each other. 
