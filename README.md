@@ -15,7 +15,7 @@ You will need the following software or libraries:
 ## Usage and Functionality
 TODO
 
-## Tools Used
+## Methodology of Tools Used
 ### Python
 Various python libraries such as pymongo, dash, pandas and dash leaflet were used in this application due to their flexibility and ease of connecting to MongoDB. In our Python CRUD module, we used pymongo and pandas to connect to Mongo.
 
@@ -33,6 +33,11 @@ Used for its ease of use with MongoDB. It offers full support for MongoDB queryi
 Pandas is a very powerful data analysis library with the use of data frames. The library helps us connect the data we import from pymongo and display it on dash acting as the controller of the application.
 
 ## Challenges
+* Throughout this project, we encountered many challenges and obstacles. 
+* The formatting of the header and logo proved to be difficult. We used flexbox in CSS to neatly display the two next to each other. 
+* When creating the queries, it required some trial and error to correctly connect the callback using the filter_type variable. In the end, using an if else branch seemed like an easy way to create it. Future improvements to this are likely possible. 
+* Like formatting the headers and logo, when working on geolocation chart and pie chart we had to research some CSS to style them well. We also reviewed the dash documentation a lot to create the various styling features for the data table. For example, we wanted to make the drop-down filter menu more intuitive for users. We found that dash lets us add a placeholder value so we can let the user know what it does. 
+* When creating the pie chart, we had to review the pyplot documentation as the plain pie chart was showing data in the entire data set and un-readable. After creating some subsets in pandas and filtering just the top 10 dog breeds, the chart is significantly more readable. 
 
 ## Future Improvements
 
