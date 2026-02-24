@@ -4,13 +4,13 @@ This is a `full-stack web application` dashboard created for Grazioso Salvare, a
 
 ## Getting Started
 You will need the following software or libraries:  
-[Python ](https://www.python.org/downloads/)
-Python CRUD module(add link to readME) 
-[PyMongo](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/get-started/)  
-[MongoDB](https://www.mongodb.com/docs/get-started/?language=nodejs)
-[Dash](https://dash.plotly.com/installation) 
-[Dash_leaflet](https://www.dash-leaflet.com/) 
-[Pandas](https://pandas.pydata.org/)
+1. [Python ](https://www.python.org/downloads/)
+2. Python CRUD module(add link to readME) 
+3. [PyMongo](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/get-started/)  
+4. [MongoDB](https://www.mongodb.com/docs/get-started/?language=nodejs)
+5. [Dash](https://dash.plotly.com/installation) 
+6. [Dash_leaflet](https://www.dash-leaflet.com/) 
+7. [Pandas](https://pandas.pydata.org/)
 
 ## Usage and Functionality
 TODO
