@@ -1,18 +1,18 @@
 # Animal-Shelter-Dashboard-Grazioso-Salvare
 ## Overview
 
-### Getting Started
+## Getting Started
 
-### Usage and Functionality
+## Usage and Functionality
 
-### Tools Used
-#### MongoDB
-#### Dash
-#### Pymongo
+## Tools Used
+### MongoDB
+### Dash
+### Pymongo
 
-### Challenges
+## Challenges
 
-### Future Improvements
+## Future Improvements
 
 ## Reflection
 
