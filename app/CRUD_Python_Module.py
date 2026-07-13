@@ -1,35 +1,30 @@
-# Example Python Code to Insert a Document 
+# Creston Getz 7/13/26
+# This is a CRUD module for the Animal Shelter Dashboard.
+# It connected to mongoDB and implements the CRUD operations for the animals collection.
 
-from pymongo import MongoClient 
-from bson.objectid import ObjectId 
 
-class AnimalShelter(object): 
-    """ CRUD operations for Animal collection in MongoDB """ 
+import os
+from urllib.parse import quote_plus
+from pymongo import MongoClient
+from bson.objectid import ObjectId
 
-    def __init__(self, USER, PASS): 
-        # Initializing the MongoClient. This helps to access the MongoDB 
-        # databases and collections. This is hard-wired to use the aac 
-        # database, the animals collection, and the aac user. 
-        # 
-        # You must edit the password below for your environment. 
-        # 
-        # Connection Variables 
-        # 
-        # TODO: DELETE hardcoded values in production
-        # USER = 'aacuser' 
-        # PASS = 'password'
-        
-        HOST = 'localhost' 
-        PORT = 27017 
-        DB = 'aac' 
-        COL = 'animals' 
-        # 
-        # Initialize Connection 
-        # 
-        #self.client = MongoClient('mongodb://%s:%s@%s:%d' % (USER,PASS,HOST,PORT))
-        self.client = MongoClient('mongodb://%s:%s@localhost:27017/?authSource=aac' % (USER, PASS))
-        self.database = self.client['%s' % (DB)] 
-        self.collection = self.database['%s' % (COL)] 
+class AnimalShelter(object):
+    """ CRUD operations for Animal collection in MongoDB """
+
+    def __init__(self, USER, PASS, DB, COL):
+        # Initializing the MongoClient. This helps to access the MongoDB
+        # databases and collections. Requires the aac database, animals collection, and the aac user/pass.
+
+        # Atlas cluster address
+        HOST = os.environ["MONGO_HOST"]
+
+        # Credentials are URL-encoded in case they contain special characters
+        # quote plus changes special chars to be url safe
+        uri = "mongodb+srv://%s:%s@%s/?appName=Cluster0" % (quote_plus(USER), quote_plus(PASS), HOST)
+
+        self.client = MongoClient(uri)
+        self.database = self.client['%s' % (DB)]
+        self.collection = self.database['%s' % (COL)]
 
     # Create a method to return the next available record number for use in the create method
             
