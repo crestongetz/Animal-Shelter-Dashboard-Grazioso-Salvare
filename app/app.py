@@ -6,11 +6,14 @@
 # 
 #
 import os
+import sys
 import pandas as pd
 from dotenv import load_dotenv
 from flask import Flask
-from CRUD_Python_Module import AnimalShelter
-from api import register_animal_routes
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from app.CRUD_Python_Module import AnimalShelter
+from app.api import register_animal_routes
 
 load_dotenv()
 
@@ -26,6 +29,9 @@ shelter = AnimalShelter(
     os.environ["MONGO_DB"],
     os.environ["MONGO_COLLECTION"],
 )
+
+# Register the routes we will use for backend API calls.
+# see app/api.py for routes
 register_animal_routes(server, shelter)
 
 # class read method must support return of list object and accept projection json input
@@ -37,3 +43,8 @@ df = pd.DataFrame.from_records(shelter.read({}))
 # it in the dataframe here. The df.drop command allows us to drop the column. If we do not set
 # inplace=True - it will reeturn a new dataframe that does not contain the dropped column(s)
 df.drop(columns=['_id'], inplace=True)
+
+
+if __name__ == '__main__':
+    # Run the API on port 5000
+    server.run(port=5000, debug=True)
