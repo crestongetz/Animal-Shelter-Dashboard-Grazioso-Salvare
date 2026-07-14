@@ -1,19 +1,22 @@
 # Creston Getz 7/13/26
-# Thie file implements the APIs for the dashbaord.
-# It allows the dropdown filtering to be seperate from the dash application and allows the backend to communicate with Dash.
+# This file implements the APIs for the dashboard.
+# It allows the dropdown filtering to be separate from the dash application and allows the backend to communicate with Dash.
+# There are only 3 GET methods there is no way to update, delete, or create entries as of now.
 
 import os
 from flask import jsonify, request
 from bson.json_util import dumps
 import json
 
-# Global dict to store the filters for dropdown menu.
+# Global dict to store the filters for dropdown menu. 
+# These are MongoDB queries that when used with pyMongo let us filter the dataset before we send it to the front end Dash app.
+# These used to be stored inside the dash app.
 RESCUE_QUERIES = {
     'Water Rescue': {
         "animal_type": "Dog",
         "breed": {"$in":["Labrador Retriever Mix","Chesapeake Bay Retriever","Newfoundland"]},
         "sex_upon_outcome": "Intact Female",
-        "age_upon_outcome_in_weeks": {"$gte": 26, "$lte": 156}
+        "age_upon_outcome_in_weeks": {"$gte": 26, "$lte": 156} # in weeks
     },
 
     'Mountain or Wilderness Rescue': {
@@ -32,11 +35,13 @@ RESCUE_QUERIES = {
 }
 
 
+# Registers routes for the animal shelter API
+# Inspired by https://flask.palletsprojects.com/en/stable/quickstart/#routing accessed 7/12/26 and examples from Claude Code
 def register_animal_routes(server, shelter):
     """Registers routes for the animal shelter API"""
 
     # Adds requirement for API key to access the API routes.
-    # Method will be called before all requests to sever. Key must match env file.
+    # Method will be called before all requests to server. Key must match env file.
     @server.before_request
     def require_key():
         """Adds requirement for API key to access the API routes"""
@@ -57,10 +62,10 @@ def register_animal_routes(server, shelter):
         return json.loads(dumps(animals)), 200 #return as JSON prevents typeError 
     
 
-    # Route to return filtered animals
+    # Route to return filtered animals. Which rescue type requested is determined by params in request.
     @server.route('/api/animals/filter', methods=['GET'])
     def get_filtered_animals():
-        """Returs a filtered list of dogs based on query request"""
+        """Returns a filtered list of dogs based on query request"""
         rescue_type_filter = request.args.get('rescue_type') # sends filter type via args in URL
         query = RESCUE_QUERIES.get(rescue_type_filter, {}) # will return empty dict if none is found
         try:

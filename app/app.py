@@ -1,23 +1,21 @@
 # Creston Getz  7/13/26
-# This file implements the API for the dashbaord. It seperates the backend logic from the old jupyter notebook dashbaord file.
-# This API built with Flask will handle CRUD operations and send a API back to the front end of the daashbarod which will be created using Dash.
-# Security will be implemented in Dash.
-#
-# 
-#
+# This file creates the Flask server for the APIs. It separates the backend logic from the old Jupyter notebook dashboard file.
+# The APIs were built with Flask handle the read in CRUD.
+# The APIs are used to communicate with the Dash front end.
+
+
 import os
 import sys
 import pandas as pd
 from dotenv import load_dotenv
 from flask import Flask
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from app.CRUD_Python_Module import AnimalShelter
 from app.api import register_animal_routes
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 load_dotenv()
 
-# Create Flask sever
+# Create Flask server
 server = Flask(__name__)
 server.config['SECRET_KEY'] = os.environ["FLASK_SECRET_KEY"]
 

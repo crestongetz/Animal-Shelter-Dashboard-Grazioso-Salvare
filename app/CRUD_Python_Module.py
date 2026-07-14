@@ -1,6 +1,6 @@
 # Creston Getz 7/13/26
 # This is a CRUD module for the Animal Shelter Dashboard.
-# It connected to mongoDB and implements the CRUD operations for the animals collection.
+# It connects to a MongoDB database running on Atlas and implements the CRUD operations for the animals collection.
 
 
 import os
@@ -8,27 +8,31 @@ from urllib.parse import quote_plus
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
+
+# This class creates an object we can perform operations on easily and pass between methods/files.
+# It connects to the database using env vars and implements CRUD methods we can use on the object via self.
+# see api.py for its usage.
 class AnimalShelter(object):
     """ CRUD operations for Animal collection in MongoDB """
 
     def __init__(self, USER, PASS, DB, COL):
-        # Initializing the MongoClient. This helps to access the MongoDB
+        # Initializing the MongoClient.
         # databases and collections. Requires the aac database, animals collection, and the aac user/pass.
 
         # Atlas cluster address
         HOST = os.environ["MONGO_HOST"]
 
         # Credentials are URL-encoded in case they contain special characters
-        # quote plus changes special chars to be url safe
+        # quote plus changes special chars to be url safe. 
+        # This line was created by Claude code with some edits by me. Quote plus helped fix some problems I was having.
         uri = "mongodb+srv://%s:%s@%s/?appName=Cluster0" % (quote_plus(USER), quote_plus(PASS), HOST)
 
         self.client = MongoClient(uri)
         self.database = self.client['%s' % (DB)]
         self.collection = self.database['%s' % (COL)]
 
-    # Create a method to return the next available record number for use in the create method
             
-    # Complete this create method to implement the C in CRUD. 
+    # This method implements the Create in CRUD. It returns a boolean if the query created the entry or not.
     def create(self, data) -> bool:
         if data is None:
             print('Nothing to save, because data parameter is empty')
@@ -38,11 +42,11 @@ class AnimalShelter(object):
             return True
             
         except Exception as e: #if data is not empty but not a dict
-            print(f'An error occured: {e}')
+            print(f'An error occurred: {e}')
             return False
 
 
-    # Create method to implement the R in CRUD.
+    # This method implements the Read in CRUD. It will return a python list full of MongoDB query results.
     def read(self, data) -> list:
         if data is None:
             print('Nothing to save, because data parameter is empty')
@@ -55,11 +59,12 @@ class AnimalShelter(object):
             return list_of_results
             
         except Exception as e: #if data is not empty but not a dict
-            print(f'An error occured: {e}')
+            print(f'An error occurred: {e}')
             return list()
     
     
-    # method to implement U in CRUD. returns number of updated objects
+    # This method implements Update in CRUD. It returns number of updated objects.
+    # An optional parameter updateAll can be used to change many entries. Method will update one entry by default.
     def update(self, query, updateData, updateAll=False) -> int:
         if updateData is None:
             print('Nothing to save, because data parameter is empty')
@@ -81,14 +86,15 @@ class AnimalShelter(object):
             return result.modified_count
                 
         except Exception as e: 
-            print(f'An error occured: {e}')
-            return 0 # no updates where made
+            print(f'An error occurred: {e}')
+            return 0 # no updates were made
 
             
-    # Method to implement D in CRUD. returns number of deleted objects
+    # This method implements Delete in CRUD. It returns number of deleted objects.
+    # An optional parameter deleteAll can be used to delete many entries. Method will delete one entry by default.
     def delete(self, deleteData, deleteAll=False) -> int:
         if deleteData is None:
-            print('Nothing to save, becuase data paramter is empty')
+            print('Nothing to save, because data parameter is empty')
             return 0
         
         if not isinstance(deleteAll, bool):
@@ -103,8 +109,8 @@ class AnimalShelter(object):
             return result.deleted_count
         
         except Exception as e: 
-            print(f'An error occured: {e}')
-            return 0 # no updates where made
+            print(f'An error occurred: {e}')
+            return 0 # no updates were made
         
         
         
