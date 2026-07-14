@@ -30,21 +30,13 @@ shelter = AnimalShelter(
     os.environ["MONGO_COLLECTION"],
 )
 
+
 # Register the routes we will use for backend API calls.
 # see app/api.py for routes
 register_animal_routes(server, shelter)
 
-# class read method must support return of list object and accept projection json input
-# sending the read method an empty document requests all documents be returned
-df = pd.DataFrame.from_records(shelter.read({}))
-
-# MongoDB v5+ is going to return the '_id' column and that is going to have an
-# invlaid object type of 'ObjectID' - which will cause the data_table to crash - so we remove
-# it in the dataframe here. The df.drop command allows us to drop the column. If we do not set
-# inplace=True - it will reeturn a new dataframe that does not contain the dropped column(s)
-df.drop(columns=['_id'], inplace=True)
-
 
 if __name__ == '__main__':
-    # Run the API on port 5000
+    # Run the API on port 5001
+    # On mac port 5000 is taken by air drop
     server.run(port=5001, debug=True)
