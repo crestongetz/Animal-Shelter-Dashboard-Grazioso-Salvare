@@ -1,5 +1,6 @@
 # Animal-Shelter-Dashboard-Grazioso-Salvare
 ## Overview
+### NOTE THIS READ ME HAS NOT YET BEEN UPDATED FOR NEW PROJECT
 This is a `full-stack web application` dashboard created for Grazioso Salvare, a search and rescue dog training organization. The dashboard uses a python CRUD module to connect with a mongo database allowing users to filter the Austin Animal Center shelter data in Austin, Texas. The dashboard provides a `user-friendly way to identify dogs` that meet certain profiles based on their age, sex and so on. The projects architecture uses the `MVC design pattern`, MongoDB serves as the Model, Dash widgets as the View, and the Python CRUD module as the Controller 
 
 ## Getting Started

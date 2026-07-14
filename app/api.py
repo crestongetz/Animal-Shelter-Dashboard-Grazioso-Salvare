@@ -1,3 +1,7 @@
+# Creston Getz 7/13/26
+# Thie file implements the APIs for the dashbaord.
+# It allows the dropdown filtering to be seperate from the dash application and allows the backend to communicate with Dash.
+
 import os
 from flask import jsonify, request
 from bson.json_util import dumps
