@@ -47,4 +47,4 @@ df.drop(columns=['_id'], inplace=True)
 
 if __name__ == '__main__':
     # Run the API on port 5000
-    server.run(port=5000, debug=True)
+    server.run(port=5001, debug=True)
