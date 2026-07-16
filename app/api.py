@@ -37,7 +37,7 @@ RESCUE_QUERIES = {
 
 
 # Registers routes for the animal shelter API
-# Inspired by https://flask.palletsprojects.com/en/stable/quickstart/#routing accessed 7/12/26 and examples from Claude Code
+# Inspired by https://flask.palletsprojects.com/en/stable/quickstart/#routing accessed 7/12/26 and examples from Claude
 def register_animal_routes(server, shelter):
     """Registers routes for the animal shelter API"""
 
