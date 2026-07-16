@@ -1,7 +1,7 @@
 # Creston Getz 7/13/26
 # This file implements the APIs for the dashboard.
 # It allows the dropdown filtering to be separate from the dash application and allows the backend to communicate with Dash.
-# There are only 3 GET methods; there is no way to update, delete, or create entries as of now.
+# There are only 2 GET methods; there is no way to update, delete, or create entries as of now.
 
 import os
 import secrets
