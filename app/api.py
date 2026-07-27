@@ -15,7 +15,7 @@ import json
 RESCUE_QUERIES = {
     'Water Rescue': {
         "animal_type": "Dog",
-        "breed": {"$in":["Labrador Retriever Mix","Chesapeake Bay Retriever","Newfoundland"]},
+        "breed": {"$in":["Labrador Retriever","Chesapeake Bay Retriever","Newfoundland"]},
         "sex_upon_outcome": "Intact Female",
         "age_upon_outcome_in_weeks": {"$gte": 26, "$lte": 156} # in weeks
     },

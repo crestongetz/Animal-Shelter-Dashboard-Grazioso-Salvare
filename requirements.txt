@@ -10,3 +10,5 @@ matplotlib
 requests
 jupyter
 dash_mantine_components
+sodapy
+geopy

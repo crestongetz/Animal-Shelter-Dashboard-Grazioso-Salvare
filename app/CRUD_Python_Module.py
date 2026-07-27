@@ -111,8 +111,19 @@ class AnimalShelter(object):
         except Exception as e: 
             print(f'An error occurred: {e}')
             return 0 # no updates were made
-        
-        
-        
+
+
+    # This method is used to bulk load data into the Mongo Database
+    # Returns the number of ids entered or 0 on error
+    def load_database(self, list_of_data) -> int:
+        if not list_of_data:
+            return 0
+
+        try: 
+            result = self.database.animals.insert_many(list_of_data)
+            return len(result.inserted_ids)
+        except Exception as e:
+            print(f"There was an error: {e}" )
+            return 0
                 
                 
