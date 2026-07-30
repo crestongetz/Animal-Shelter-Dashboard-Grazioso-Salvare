@@ -4,7 +4,6 @@ python-dotenv
 pandas
 numpy
 dash
-dash-leaflet
 plotly
 matplotlib
 requests
