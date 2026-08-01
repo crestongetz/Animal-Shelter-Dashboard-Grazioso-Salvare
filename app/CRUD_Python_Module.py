@@ -1,6 +1,7 @@
-# Creston Getz 7/13/26
+# Creston Getz 8/1/26
 # This is a CRUD module for the Animal Shelter Dashboard.
 # It connects to a MongoDB database running on Atlas and implements the CRUD operations for the animals collection.
+# It also implements a JSON Schema validator and a function to bulk load the database.
 
 
 import os

@@ -1,7 +1,8 @@
-# Creston Getz 7/13/26
+# Creston Getz 8/1/26
 # This file implements the APIs for the dashboard.
 # It allows the dropdown filtering to be separate from the Dash application and allows the backend to communicate with Dash.
 # There are only 2 GET methods; there is no way to update, delete, or create entries as of now.
+# The BSON dates are converted to strings in this file for the dashboard.
 
 import os
 import secrets
