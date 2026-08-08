@@ -7,7 +7,7 @@
 
 ## Overview
 
-This is a **full-stack web dashboard** created for Grazioso Salvare, a search-and-rescue dog training organization. It is an enhanced version of the original [Animal Shelter Dashboard](https://github.com/crestongetz/Animal-Shelter-WebDashboard-Grazioso-Salvare/tree/main). You can view all the changes made visually using the [commits page](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/commits/main/) or the [changes](#Changes-made) section for a text description.
+This is a **full-stack web dashboard** created for Grazioso Salvare, a search-and-rescue dog training organization. It is an enhanced version of the original [Animal Shelter Dashboard](https://github.com/crestongetz/Animal-Shelter-WebDashboard-Grazioso-Salvare/tree/main). You can view all the changes made visually using the [commits page](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/commits/main/) or the [narratives](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/tree/b3d9c51c5731dd6085e88693644d9970d8c9ce1f/narratives) for a deep dive into both the changes made and why.
 
 The dashboard uses the **real API data** from the Austin Animal Shelter and loads it into a MongoDB Atlas collection. After being
 loaded into the database, the [app](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/tree/0b82e2e1728767fb445a3d6af7321daa7f778a0a/app) directory or backend of the application can be used to communicate with the Dash front end via HTTP. This is a client-server architecture.
