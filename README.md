@@ -42,6 +42,34 @@ You will need the following software or libraries, all of which can be downloade
 - API_KEY= TODO: Shared secret between front and backend. Any long string.
 - [SOCRATA_APP_TOKEN](https://data.austintexas.gov/)= TODO: App token allows for increased API requests but is not needed.
 
+## How to Run
+The dashboard runs as two processes: a Flask backend running on port 5001 (for mac) and a Dash frontend on port 8050. Both must run.
+### Install
+1. Clone repo: `git clone https://github.com/crestongetz/Animal-Shelter-WebDashboard-Grazioso-Salvare.git`
+2. `cd Animal-Shelter-WebDashboard-Grazioso-Salvare`
+3. `python3 -m venv .venv`
+4. `source .venv/bin/activate`
+5. `pip install -r requirements.txt`
+
+### Config
+1. [Create database](https://www.mongodb.com/products/platform/atlas-database) and set up user 
+2. Set up .env file
+
+### Load Database
+1. Open `data/data.ipynb`
+2. Run it. Re-run when you want to refresh data.
+
+### Start Flask
+1. Open a new terminal in the project root.
+2. `python -m app.app`
+
+### Start dashboard
+1. Open a new terminal
+2. Open `Grazioso_Dashboard.ipynb`
+3. Hit `Run all cells`
+4. The dashboard will load on http://127.0.0.1:8050
+5. A login prompt will show. Use your DASH_PASSWORD from env. Username is `admin`
+
 
 ## Changes Made
 
