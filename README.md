@@ -18,6 +18,36 @@ The dashboard provides a convenient way for Grazioso Salvare to filter dogs spec
 
 ![Demo Gif](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/310d2bb9e37b41d74973e98c0e24b8b297b83a32/resources/Animal_DashbaordGIF.gif)
 
+The filters are managed by a Python dictionary inside `api.py`. Users can select a dropdown menu to select which filter they want. It will then search the entire Animal Shelter dataset to find dogs that match the training criteria. 
+
+```
+# Global dict to store the filters for the dropdown menu.
+# These are MongoDB queries that, when used with PyMongo, let us filter the dataset before we send it to the front-end Dash app.
+# These used to be stored inside the Dash app.
+RESCUE_QUERIES = {
+    'Water Rescue': {
+        "animal_type": "Dog",
+        "breed": {"$in":["Labrador Retriever","Chesapeake Bay Retriever","Newfoundland"]},
+        "sex_upon_outcome": "Intact Female",
+        "age_in_weeks": {"$gte": 26, "$lte": 156} # in weeks
+    },
+
+    'Mountain or Wilderness Rescue': {
+        "animal_type": "Dog",
+        "breed": {"$in":["German Shepherd","Alaskan Malamute","Old English Sheepdog", "Siberian Husky", "Rottweiler"]},
+        "sex_upon_outcome": "Intact Male",
+        "age_in_weeks": {"$gte": 26, "$lte": 156}
+    },
+
+    'Disaster Rescue or Individual Tracking': {
+        "animal_type": "Dog",
+        "breed": {"$in":["Doberman Pinscher","German Shepherd", "Golden Retriever","Bloodhound","Rottweiler"]},
+        "sex_upon_outcome": "Intact Male",
+        "age_in_weeks": {"$gte": 20, "$lte": 300}
+    }
+}
+```
+
 ## Getting Started
 You will need the following software or libraries, all of which can be downloaded using [requirements.txt](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/0b82e2e1728767fb445a3d6af7321daa7f778a0a/requirements.txt): 
 - Flask
