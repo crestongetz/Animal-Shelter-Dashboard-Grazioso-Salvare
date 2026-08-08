@@ -40,7 +40,7 @@ You will need the following software or libraries, all of which can be downloade
 - FLASK_SECRET_KEY=
 - DASH_PASSWORD=password123
 - API_KEY=
-- SOCRATA_APP_TOKEN=
+- [SOCRATA_APP_TOKEN](https://data.austintexas.gov/)=
 
 
 ## Changes made
