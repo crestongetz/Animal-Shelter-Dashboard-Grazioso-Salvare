@@ -16,6 +16,8 @@ The dashboard provides a convenient way for Grazioso Salvare to filter dogs spec
 
 [View this project in my ePortfolio](https://crestongetz.github.io/)
 
+![Demo Gif](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/310d2bb9e37b41d74973e98c0e24b8b297b83a32/resources/Animal_DashbaordGIF.gif)
+
 ## Getting Started
 You will need the following software or libraries, all of which can be downloaded using [requirements.txt](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/0b82e2e1728767fb445a3d6af7321daa7f778a0a/requirements.txt): 
 - Flask
