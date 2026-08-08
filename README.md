@@ -43,7 +43,7 @@ You will need the following software or libraries, all of which can be downloade
 - [SOCRATA_APP_TOKEN](https://data.austintexas.gov/)= TODO: App token allows for increased API requests but is not needed.
 
 
-## Changes made
+## Changes Made
 
 - **Separated the logic into a backend and a frontend.** Dash is kept as the frontend in the Jupyter notebook file, and Flask is implemented as the backend in the `app` directory.
 - **Made UI and UX improvements.**
@@ -51,3 +51,13 @@ You will need the following software or libraries, all of which can be downloade
 - **Created a database.** A MongoDB database was set up on Atlas for this application.
 - **Performed ETL** on the Real Austin animal shelter API and loaded it into the database.
 - **Client-Server Architecture** instead of MVC.
+
+## Future Improvements:
+1. Improve ETL data types. age_in_weeks should have no strings stored in the database.
+2. Add a fail-safe for a failed database load.
+3. Add automatic or scheduled loading from the API.
+4. Split into two database users: one for loading and one for reading.
+5. Use logging instead of print in various parts of the application such as the CRUD module.
+6. Improve security for production in various parts.
+7. Add testing.
+8. Overall UI and UX.
