@@ -33,14 +33,14 @@ You will need the following software or libraries, all of which can be downloade
 
 **For the application to work, you will also need to create your own env file. The env file was not included in this application to show best practices. You can use all of the logic in the application as is, but you will need to make a Mongo database on Atlas and connect it through environment variables. Specifically, you will need to create and obtain the following:**
 - MONGO_USER=aacuser
-- MONGO_PASS=
-- MONGO_HOST=
+- MONGO_PASS= TODO: MongoDB Atlas aacuser password
+- MONGO_HOST= TODO: Atlas cluster hostname
 - MONGO_DB=aac
 - MONGO_COLLECTION=animals
-- FLASK_SECRET_KEY=
+- FLASK_SECRET_KEY= TODO: Flask session signing key. Signs session cookies. Any long string
 - DASH_PASSWORD=password123
-- API_KEY=
-- [SOCRATA_APP_TOKEN](https://data.austintexas.gov/)=
+- API_KEY= TODO: Shared secret between front and backend. Any long string.
+- [SOCRATA_APP_TOKEN](https://data.austintexas.gov/)= TODO: App token allows for increased API requests but is not needed.
 
 
 ## Changes made
