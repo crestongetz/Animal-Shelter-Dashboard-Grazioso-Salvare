@@ -1,5 +1,10 @@
 # Animal Shelter Dashboard — Grazioso Salvare
 
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Dash](https://img.shields.io/badge/Dash-0081CB?style=for-the-badge&logo=dash&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
 ## Overview
 
 A dashboard for Grazioso Salvare, a fictional search and rescue dog training organization. It lets staff filter Austin Animal Center data to find dogs that match the criteria for their rescue programs without calling the shelter or sorting through new intakes by hand. It is a single-page web application with a Dash frontend, a Flask backend, and a MongoDB database.
