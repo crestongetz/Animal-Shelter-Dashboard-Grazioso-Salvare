@@ -14,6 +14,7 @@ loaded into the database, the [app](https://github.com/crestongetz/Animal-Shelte
 
 The dashboard provides a convenient way for Grazioso Salvare to filter dogs specifically for their dog training programs. The filters, which can be used in a dropdown menu on the dashboard, are stored in a dictionary in the api.py file. Doing so improves usability and prevents NoSQL injections.
 
+[View this project in my ePortfolio](https://crestongetz.github.io/)
 
 ## Getting Started
 You will need the following software or libraries, all of which can be downloaded using [requirements.txt](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/0b82e2e1728767fb445a3d6af7321daa7f778a0a/requirements.txt): 
@@ -70,9 +71,14 @@ The dashboard runs as two processes: a Flask backend running on port 5001 (for m
 4. The dashboard will load on http://127.0.0.1:8050
 5. A login prompt will show. Use your DASH_PASSWORD from env. Username is `admin`
 
+## Repository Files
+- `app/CRUD.py` | Handles database connection
+- `app/app.py` and `app/api.py` | Handles Flask logic
+- `data/data.ipynb` | Handles ETL and Austin Animal Shelter API logic. This file loads the data into the MongoDB database.
+- `narratives` | Deep dive into the design choices and changes made
+- `Graziso_Dashbaord.ipynb` | Main application file. Handles the Dash frontend.
 
 ## Changes Made
-
 - **Separated the logic into a backend and a frontend.** Dash is kept as the frontend in the Jupyter notebook file, and Flask is implemented as the backend in the `app` directory.
 - **Made UI and UX improvements.**
 - **Improved security** by adding a login popup, securing endpoints with an API key, and managing environment variables.
