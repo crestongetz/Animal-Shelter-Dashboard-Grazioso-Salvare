@@ -18,3 +18,4 @@ This project is an enhanced version of the [Animal Shelter Dashboard](https://gi
 - **Improved security** by adding a login popup, securing endpoints with an API key, and managing environment variables.
 - **Created a database.** A MongoDB database was set up on Atlas for this application.
 - **Performed ETL** on the Real Austin animal shelter API and loaded it into the database.
+- Client-Server Architecture
