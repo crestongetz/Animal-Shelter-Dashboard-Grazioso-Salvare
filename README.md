@@ -7,16 +7,16 @@
 
 ## Overview
 
-This is a **full-stack web dashboard** created for Grazioso Salvare, a search-and-rescue dog training organization. It is an enhanced version of the original [Animal Shelter Dashboard](https://github.com/crestongetz/Animal-Shelter-WebDashboard-Grazioso-Salvare/tree/main). You can view all the changes made visually using the [commits page](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/commits/main/) or the [narratives](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/tree/b3d9c51c5731dd6085e88693644d9970d8c9ce1f/narratives) for a deep dive into both the changes made and why.
+This is a **full-stack web dashboard** created for Grazioso Salvare, a search-and-rescue dog training organization. It is an enhanced version of the original [Animal Shelter Dashboard](https://github.com/crestongetz/Animal-Shelter-WebDashboard-Grazioso-Salvare/tree/main). You can view all the changes made visually using the [commits page](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/commits/main/) or the [narratives](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/tree/main/narratives) for a deep dive into both the changes made and why.
 
 The dashboard uses the **real API data** from the Austin Animal Shelter and loads it into a MongoDB Atlas collection. After being
-loaded into the database, the [app](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/tree/0b82e2e1728767fb445a3d6af7321daa7f778a0a/app) directory or backend of the application can be used to communicate with the Dash front end via HTTP. This is a client-server architecture.
+loaded into the database, the [app](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/tree/main/app) directory or backend of the application can be used to communicate with the Dash front end via HTTP. This is a client-server architecture.
 
 The dashboard provides a convenient way for Grazioso Salvare to filter dogs specifically for their dog training programs. The filters, which can be used in a dropdown menu on the dashboard, are stored in a dictionary in the api.py file. Doing so improves usability and prevents NoSQL injections.
 
 [View this project in my ePortfolio](https://crestongetz.github.io/)
 
-![Demo Gif](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/310d2bb9e37b41d74973e98c0e24b8b297b83a32/resources/Animal_DashbaordGIF.gif)
+![Demo Gif](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/main/resources/Animal_DashbaordGIF.gif)
 
 The filters are managed by a Python dictionary inside `api.py`. Users can select a dropdown menu to select which filter they want. It will then search the entire Animal Shelter dataset to find dogs that match the training criteria. 
 
@@ -49,7 +49,7 @@ RESCUE_QUERIES = {
 ```
 
 ## Getting Started
-You will need the following software or libraries, all of which can be downloaded using [requirements.txt](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/0b82e2e1728767fb445a3d6af7321daa7f778a0a/requirements.txt): 
+You will need the following software or libraries, all of which can be downloaded using [requirements.txt](https://github.com/crestongetz/Animal-Shelter-Dashboard-Grazioso-Salvare/blob/main/requirements.txt): 
 - Flask
 - Pymongo
 - Python-dotenv
